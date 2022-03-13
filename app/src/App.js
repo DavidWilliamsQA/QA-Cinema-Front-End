@@ -2,7 +2,7 @@ import React from "react"
 import Main from "./Components/Main"
 import Navbar from "./Components/Navbar"
 import FeaturedMovies from "./Components/FeaturedMovies"
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
     return(
