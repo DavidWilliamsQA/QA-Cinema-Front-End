@@ -9,22 +9,22 @@ export default function FeaturedMovies(props){
         <div className="col-6 col-sm-4 col-lg-3 col-xl-2">
             <div className="card">
                 <div className="card__cover">
-                    <img src={props.img} alt="" />
+                    <img src={props.movie.img} alt="" />
                     <a id="play512200" href="www.google.com" className="card__play">
                         <i className="icon ion-ios-play"></i>
                     </a>
                 </div>
                 <div className="card__content">
                     <h3 className="card__title">
-                        <a id="title512200" href="www.google.com">{props.title}</a>
+                        <a id="title512200" href="www.google.com">{props.movie.title}</a>
                     </h3>
                     <span className="card__category">
                         genres 
                     </span>
                     <div className="card__wrap">
                         <ul className="card__list">
-                            <li>{props.releaseDate}</li>
-                            <li><a  id="ageRating512200" href="www.google.com">{props.rating}</a></li>
+                            <li>{props.movie.releaseDate}</li>
+                            <li><a  id="ageRating512200" href="www.google.com">{props.movie.rating}</a></li>
                         </ul>
                     </div>
                 </div>
