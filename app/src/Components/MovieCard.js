@@ -3,9 +3,10 @@ import "../css/style.css"
 import "../css/bootstrap-grid.min.css"
 import "../css/ionicons.min.css"
 import "../css/plyr.css"
+const {REACT_APP_MOVIE_DB_API_KEY} = process.env;
 
 export default function MovieCard(props){
-    
+    console.log(`${REACT_APP_MOVIE_DB_API_KEY}`)
     return (
 
         <div className="col-6 col-sm-4 col-lg-3 col-xl-2">
