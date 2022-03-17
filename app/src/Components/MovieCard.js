@@ -2,7 +2,7 @@ import React from "react"
 import "../style.css"
 import "../bootstrap-grid.min.css"
 
-export default function FeaturedMovies(props){
+export default function MovieCard(props){
     
     return (
 

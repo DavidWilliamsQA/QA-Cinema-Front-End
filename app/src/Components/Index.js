@@ -1,20 +1,30 @@
 import React from "react"
-import "../style.css"
+import Main from "./Main"
+import Header from "./Header"
+import Footer from "./Footer"
+import MovieCard from "./MovieCard"
+import featuredMovieData from "../featuredMovieData"
 
-export default function Main(){
-    return (
-        // <div>
-            <section className="section section--bg"  >
-
-                    <div>
-                        <img src="img/banner/qa-banner.png" className="d-block" style="width: 100% !important; opacity: 0.2;" alt=""/>
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ff5860; text-align: center; text-justify: inter-word;">
-                            <h1><b>Closed Until Further Notice</b></h1>
-                            <h3> <b>Following government guidelines QA Cinemas are closed until further notice.</b> </h3>
+export default function Index() {
+    const featuredMovieElements = featuredMovieData.map(movie =>{
+        return <MovieCard movie={movie} />
+    })
+    const comingSoonMovieElements = featuredMovieData.map(movie =>{
+        return <MovieCard movie={movie} />
+    })
+    return(
+        <body>
+            <Header />
+            <section className="home">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <a className="home__title">FEATURED MOVIES</a>
                         </div>
-                    </div>
-
-            </section>)
+                        {featuredMovieElements}
+                    </div>      
+                </div>
+            </section>
 
             {/* <section className="section section--bg" data-bg="img/section/section.jpg">
                 <div className="content__head">
@@ -121,6 +131,19 @@ export default function Main(){
                 </div>
 
             </section> */}
-    // </div>
-    // )
+
+            <section className="home">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <a className="home__title">COMING SOON</a>
+                        </div>
+                        {comingSoonMovieElements}
+                    </div>      
+                </div>
+            </section>
+            
+            <Footer/>
+        </body>
+    )
 }
