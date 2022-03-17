@@ -1,7 +1,7 @@
 import React from "react"
 import QACinemaLogo from "../Images/QA-cinema-logo2.png"
-import "../style.css"
-import "../bootstrap-grid.min.css"
+import "../css/style.css"
+import "../css/bootstrap-grid.min.css"
 
 export default function Header(){
     return (

@@ -1,6 +1,8 @@
 import React from "react"
-import "../style.css"
-import "../bootstrap-grid.min.css"
+import "../css/style.css"
+import "../css/bootstrap-grid.min.css"
+import "../css/ionicons.min.css"
+import "../css/plyr.css"
 
 export default function MovieCard(props){
     
@@ -11,7 +13,7 @@ export default function MovieCard(props){
                 <div className="card__cover">
                     <img src={props.movie.img} alt="" />
                     <a id="play512200" href="www.google.com" className="card__play">
-                        <i className="icon ion-ios-play"></i>
+                        {props.featured ? <i>BOOK NOW</i> : <i>COMING SOON</i>}
                     </a>
                 </div>
                 <div className="card__content">
@@ -19,14 +21,16 @@ export default function MovieCard(props){
                         <a id="title512200" href="www.google.com">{props.movie.title}</a>
                     </h3>
                     <span className="card__category">
-                        genres 
+                        {props.movie.genres}
                     </span>
-                    <div className="card__wrap">
+                    <span class="card__rate"><i class="icon ion-ios-star"></i>{props.movie.rating}</span>
                         <ul className="card__list">
-                            <li>{props.movie.releaseDate}</li>
-                            <li><a  id="ageRating512200" href="www.google.com">{props.movie.rating}</a></li>
+                            <li>
+                                <a  id="ageRating512200" href="www.google.com">
+                                    {props.movie.age_rating}
+                                </a>
+                            </li>
                         </ul>
-                    </div>
                 </div>
             </div>
         </div>

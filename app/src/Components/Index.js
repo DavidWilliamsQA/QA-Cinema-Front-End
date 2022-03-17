@@ -7,10 +7,10 @@ import featuredMovieData from "../featuredMovieData"
 
 export default function Index() {
     const featuredMovieElements = featuredMovieData.map(movie =>{
-        return <MovieCard movie={movie} />
+        return <MovieCard movie={movie} featured={true} />
     })
     const comingSoonMovieElements = featuredMovieData.map(movie =>{
-        return <MovieCard movie={movie} />
+        return <MovieCard movie={movie} featured={false} />
     })
     return(
         <body>

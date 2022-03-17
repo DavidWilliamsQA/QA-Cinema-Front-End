@@ -1,6 +1,6 @@
 import React from "react"
-import "../style.css"
-import "../bootstrap-grid.min.css"
+import "../css/style.css"
+import "../css/bootstrap-grid.min.css"
 
 export default function Footer(){
     return (
@@ -33,18 +33,18 @@ export default function Footer(){
                         <li><a href="contactUs.html">qacinema.jobs@gmail.com</a></li>
                     </ul>
                     <ul class="footer__social">
-                        <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
-                        <li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+                        <li class="facebook"><a href="www.google.com"><i class="icon ion-logo-facebook"></i></a></li>
+                        <li class="instagram"><a href="www.google.com"><i class="icon ion-logo-instagram"></i></a></li>
                         <li class="twitter"><a href="https://twitter.com/QACinema2?ref_src=twsrc%5Etfw"><i class="icon ion-logo-twitter"></i></a></li>
-                        <li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+                        <li class="vk"><a href="www.google.com"><i class="icon ion-logo-vk"></i></a></li>
                     </ul>
                 </div>
 
                 <div class="col-12">
                     <div class="footer__copyright">
                         <ul>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="www.google.com">Terms of Use</a></li>
+                            <li><a href="www.google.com">Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
