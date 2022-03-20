@@ -1,36 +1,43 @@
-import React from "react"
+import {useMemo, useEffect, useState} from "react"
 import Index from "./Components/Index"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
 import axios from "axios"
 
 export default function App() {
-    const [movieList, setMovieList] = React.useState([])
-    let featured = []
-    let coming = []
-    let showing = []
+    const [movieList, setMovieList] = useState([])
+    const [featuredMovies, setFeaturedMovies] = useState([])
+    const [upcomingMovies, setUpcomingMovies] = useState([])
 
-    React.useEffect(() => {
-        console.log("Ran App Effects")
+    // const featuredMovies = useMemo(() => {
+    //     return movieList.filter(({ status }) => status === 'featured');
+    //   }, [movieList]);
+
+    //   featuredMovies = movieList.filter(({ status }) => status === 'featured');
+        
+
+    useEffect(() => {
         axios.get(`https://qacinema-temi.herokuapp.com/movies/`)
         .then(res =>{
             setMovieList(res.data)
         })
+        .catch((err) => console.log(err))
     }, [])
+
+    useEffect(() => {
+        setFeaturedMovies(() => {return movieList.filter(({ status }) => status === 'featured')})
+        setUpcomingMovies(() => {return movieList.filter(({ status }) => status === 'upcoming')})
+    }, [movieList])
 
  
     return(
-        <div>
-             {movieList.map(movie =>{
-            if(movie.status === 'featured'){
-                featured.push(movie.api_ID)
-            } else if (movie.status === 'upcoming'){
-                coming.push(movie.api_ID)
-            } else{
-                showing.push(movie.api_ID)
-            }
-            })}
-        
-        <Index featured={featured} coming={coming} showing={showing}/>
-        </div>
+        <body>
+            <Header />
+            <Index data={featuredMovies} title="FEATURED MOVIES" featured={true}/>
+            <Index data={upcomingMovies} title="COMING SOON" />
+
+            <Footer/>
+        </body>
         
            
     )
