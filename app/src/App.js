@@ -9,13 +9,6 @@ export default function App() {
     const [featuredMovies, setFeaturedMovies] = useState([])
     const [upcomingMovies, setUpcomingMovies] = useState([])
 
-    // const featuredMovies = useMemo(() => {
-    //     return movieList.filter(({ status }) => status === 'featured');
-    //   }, [movieList]);
-
-    //   featuredMovies = movieList.filter(({ status }) => status === 'featured');
-        
-
     useEffect(() => {
         axios.get(`https://qacinema-temi.herokuapp.com/movies/`)
         .then(res =>{

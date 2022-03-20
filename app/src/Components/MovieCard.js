@@ -26,7 +26,7 @@ export default function MovieCard(props){
                         <ul className="card__list">
                             <li>
                                 <a  id="ageRating512200" href="www.google.com">
-                                    {props.movie.age_rating}
+                                    {props.data.filter(({api_ID}) => api_ID === props.movie.data.id)[0].rating}
                                 </a>
                             </li>
                         </ul>

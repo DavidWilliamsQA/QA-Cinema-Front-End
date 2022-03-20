@@ -27,7 +27,7 @@ export default function Index({ data, title, featured=false}) {
                             <a className="home__title">{title}</a>
                         </div>
                         { featuredMovies.map(movie =>{
-                return <MovieCard movie={movie} featured={featured} />
+                return <MovieCard movie={movie} featured={featured} data={data}/>
                         }) }
 
                     </div>     
