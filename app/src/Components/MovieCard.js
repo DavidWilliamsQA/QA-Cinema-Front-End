@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 import "../css/style.css"
 import "../css/bootstrap-grid.min.css"
 import "../css/ionicons.min.css"
@@ -22,12 +22,9 @@ export default function MovieCard(props){
                         <a>{props.movie.data.title}</a>
                     </h3>
                     <span className="card__category">
-                        {/* {console.log(props.movie.data.genres)} */}
                         {props.movie.data.genres.map(genre => {
                             return genre.name
                         })} 
-
-                        {/* {console.log(props.movie.data)} */}
                     </span>
                     <span class="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>
                         <ul className="card__list">

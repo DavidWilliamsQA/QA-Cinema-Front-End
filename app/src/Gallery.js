@@ -1,8 +1,7 @@
-import {useMemo, useEffect, useState} from "react"
+import {useEffect, useState} from "react"
 import MovieCardDetails from "./Components/MovieCardDetails"
 import Index from "./Components/Index"
 import axios from "axios"
-// import "./css/style.css"
 
 export default function Gallery() {
     const [movieList, setMovieList] = useState([])
@@ -24,12 +23,12 @@ export default function Gallery() {
 
  
     return(
-    <div>
-        <div style={{padding: "50px 0 50px 0"}}>
-        </div>
-        <MovieCardDetails data={featuredMovies}/>
-        <Index data={upcomingMovies} title="COMING SOON" />
-	</div>
+        <div className="catalog">
+            <div className="container">
+                <MovieCardDetails data={featuredMovies}/>
+                <Index data={upcomingMovies} title="COMING SOON" />
+            </div>
+	    </div>
 
               
     )

@@ -1,28 +1,12 @@
-import {useMemo, useEffect, useState} from "react"
-import {BrowserRouter, Route, Router, Switch,Routes} from "react-router-dom"
+import {BrowserRouter, Route,Routes} from "react-router-dom"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
+import BannerTop from "./Components/BannerTop"
 import Home from "./Home"
 import Gallery from "./Gallery"
+import FilterTop from "./Components/FilterTop"
 
 export default function App() {
-    // const [movieList, setMovieList] = useState([])
-    // const [featuredMovies, setFeaturedMovies] = useState([])
-    // const [upcomingMovies, setUpcomingMovies] = useState([])
-
-    // useEffect(() => {
-    //     axios.get(`https://qacinema-temi.herokuapp.com/movies/`)
-    //     .then(res =>{
-    //         setMovieList(res.data)
-    //     })
-    //     .catch((err) => console.log(err))
-    // }, [])
-
-    // useEffect(() => {
-    //     setFeaturedMovies(() => {return movieList.filter(({ status }) => status === 'featured')})
-    //     setUpcomingMovies(() => {return movieList.filter(({ status }) => status === 'upcoming')})
-    // }, [movieList])
-
  
     return(
 
@@ -30,8 +14,13 @@ export default function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home/>} exact/>
-                <Route path="/gallery" element={<Gallery/>}/>
-                <Route path="/" element={<Home/>}/>
+                {/* <Route path="/gallery" element={<BannerTop/>}/> */}
+                <Route path="/gallery" element={<>
+                <BannerTop title={"NOW SHOWING"}/>
+                <FilterTop/>
+                <Gallery/>
+                </>}/>
+                {/* <Route path="/" element={<Home/>}/> */}
 
             </Routes>
 

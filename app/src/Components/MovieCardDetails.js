@@ -24,8 +24,7 @@ export default function MovieCardDetails({data}){
 
 
     return (
-            <div className="catalog">
-		        <div className="container">
+            
 			        <div className="row">
                         {
                             movies.map(movie => {
@@ -33,8 +32,7 @@ export default function MovieCardDetails({data}){
                             })
                         }
                     </div>
-                </div>
-            </div>
+
                 
     )
 }
