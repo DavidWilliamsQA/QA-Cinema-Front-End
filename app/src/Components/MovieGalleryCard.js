@@ -13,19 +13,19 @@ export default function MovieGalleryCard(props){
                 <div className="row">
                     <div className="col-12 col-sm-4">
                         <div className="card__cover">
-                        <img src={`https://image.tmdb.org/t/p/original${props.movie.data.poster_path}`} alt="" />
-                            <a id="play${ids[i]}" className="card__play">
-                            <i className="icon ion-ios-play" id="playbutton${ids[i]}"></i>
+                            <img src={`https://image.tmdb.org/t/p/original${props.movie.data.poster_path}`} alt="" />
+                            <a className="card__play">
+                            <i className="icon ion-ios-play"></i>
                             </a>
                         </div>
                     </div>
                     <div className="col-12 col-sm-8">
                         <div className="card__content">
-                            <h3 className="card__title"><a id="title${ids[i]}">{props.movie.data.title}</a></h3>
+                            <h3 className="card__title"><a>{props.movie.data.title}</a></h3>
                             <span className="card__category">
-                            {props.movie.data.genres.map(genre => {
-                                return genre.name
-                            })}  
+                                {props.movie.data.genres.map(genre => {
+                                    return genre.name
+                                })}  
                             </span>
                             <div className="card__wrap">
                                 <span className="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>

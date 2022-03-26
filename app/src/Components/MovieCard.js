@@ -13,13 +13,13 @@ export default function MovieCard(props){
             <div className="card">
                 <div className="card__cover">
                     <img src={`https://image.tmdb.org/t/p/original${props.movie.data.poster_path}`} alt="" />
-                    <a id="play512200" href="www.google.com" className="card__play">
+                    <a className="card__play">
                         {props.featured ? <i>BOOK NOW</i> : <i>COMING SOON</i>}
                     </a>
                 </div>
                 <div className="card__content">
                     <h3 className="card__title">
-                        <a id="title512200" href="www.google.com">{props.movie.data.title}</a>
+                        <a>{props.movie.data.title}</a>
                     </h3>
                     <span className="card__category">
                         {/* {console.log(props.movie.data.genres)} */}

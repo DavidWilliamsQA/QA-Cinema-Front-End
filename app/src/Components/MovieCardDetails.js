@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react"
 import MovieGalleryCards from "./MovieGalleryCard"
 import axios from "axios"
-// import "../css/style.css"
+import "../css/style.css"
+import "../css/bootstrap-grid.min.css"
+import "../css/ionicons.min.css"
+import "../css/plyr.css"
 
 export default function MovieCardDetails({data}){
     const [movies, setMovies] = useState([])
@@ -21,7 +24,6 @@ export default function MovieCardDetails({data}){
 
 
     return (
-        <div>
             <div className="catalog">
 		        <div className="container">
 			        <div className="row">
@@ -33,7 +35,6 @@ export default function MovieCardDetails({data}){
                     </div>
                 </div>
             </div>
-        </div>
                 
     )
 }
