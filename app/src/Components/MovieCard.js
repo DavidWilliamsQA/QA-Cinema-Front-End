@@ -5,6 +5,8 @@ import "../css/ionicons.min.css"
 import "../css/plyr.css"
 
 export default function MovieCard(props){
+
+
     return (
         // {props.movie.img}
         <div className="col-6 col-sm-4 col-lg-3 col-xl-2">
@@ -20,12 +22,17 @@ export default function MovieCard(props){
                         <a id="title512200" href="www.google.com">{props.movie.data.title}</a>
                     </h3>
                     <span className="card__category">
-                        {props.movie.genres}
+                        {/* {console.log(props.movie.data.genres)} */}
+                        {props.movie.data.genres.map(genre => {
+                            return genre.name
+                        })} 
+
+                        {/* {console.log(props.movie.data)} */}
                     </span>
-                    <span class="card__rate"><i class="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>
+                    <span class="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>
                         <ul className="card__list">
                             <li>
-                                <a  id="ageRating512200" href="www.google.com">
+                                <a>
                                     {props.data.filter(({api_ID}) => api_ID === props.movie.data.id)[0].rating}
                                 </a>
                             </li>

@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard"
 import axios from "axios"
 
 export default function Index({ data, title, featured=false}) {
-    const [featuredMovies, setFeaturedMovies] = useState([])
+    const [movies, setMovies] = useState([])
     const [movieApiId, setMovieApiId] = useState([])
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function Index({ data, title, featured=false}) {
     useEffect(() => {
         axios.all(movieApiId.map(l => axios.get(`https://qacinema-temi.herokuapp.com/dbMovies/${l}`)))
         .then(axios.spread(function (...res){
-            setFeaturedMovies(res)
+            setMovies(res)
         }))
         .catch((err) => console.log(err))
     }, [movieApiId]) 
@@ -26,7 +26,7 @@ export default function Index({ data, title, featured=false}) {
                         <div className="col-12">
                             <a className="home__title">{title}</a>
                         </div>
-                        { featuredMovies.map(movie =>{
+                        { movies.map(movie =>{
                 return <MovieCard movie={movie} featured={featured} data={data}/>
                         }) }
 

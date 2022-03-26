@@ -2,6 +2,7 @@ import React from "react"
 import QACinemaLogo from "../Images/QA-cinema-logo2.png"
 import "../css/style.css"
 import "../css/bootstrap-grid.min.css"
+import { Link } from "react-router-dom"
 
 export default function Header(){
     return (
@@ -18,16 +19,16 @@ export default function Header(){
                                 
                                 <ul className="header__nav">
                                     <li className="header__nav-item" href>
-                                        <a className="header__nav-link">HOME</a>
+                                        <Link to="" className="header__nav-link">HOME</Link>
                                     </li>
                                     <li className="header__nav-item">
-                                        <a className="header__nav-link">MOVIES</a>
+                                        <Link to="" className="header__nav-link">MOVIES</Link>
                                     </li>
                                     <li className="header__nav-item">
-                                        <a className="header__nav-link">SCREENS</a>
+                                        <Link to="" className="header__nav-link">SCREENS</Link>
                                     </li>
                                     <li className="header__nav-item">
-                                        <a className="header__nav-link">ABOUT</a>
+                                        <Link to="" className="header__nav-link">ABOUT</Link>
                                     </li>
                                 </ul>
 
