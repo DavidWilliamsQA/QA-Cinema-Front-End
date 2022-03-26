@@ -18,11 +18,11 @@ export default function Header(){
                                 </a>
                                 
                                 <ul className="header__nav">
-                                    <li className="header__nav-item" href>
-                                        <Link to="" className="header__nav-link">HOME</Link>
+                                    <li className="header__nav-item">
+                                        <Link to="/" className="header__nav-link">HOME</Link>
                                     </li>
                                     <li className="header__nav-item">
-                                        <Link to="" className="header__nav-link">MOVIES</Link>
+                                        <Link to="/gallery" className="header__nav-link">MOVIES</Link>
                                     </li>
                                     <li className="header__nav-item">
                                         <Link to="" className="header__nav-link">SCREENS</Link>
