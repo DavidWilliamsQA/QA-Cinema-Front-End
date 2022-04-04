@@ -23,7 +23,7 @@ export default function MovieCard(props){
                     </h3>
                     <span className="card__category">
                         {props.movie.data.genres.map(genre => {
-                            return genre.name
+                            return <a>{genre.name}</a>
                         })} 
                     </span>
                     <span class="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>

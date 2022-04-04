@@ -24,7 +24,7 @@ export default function MovieGalleryCard(props){
                             <h3 className="card__title"><a>{props.movie.data.title}</a></h3>
                             <span className="card__category">
                                 {props.movie.data.genres.map(genre => {
-                                    return genre.name
+                                    return <a>{genre.name}</a>
                                 })}  
                             </span>
                             <div className="card__wrap">
