@@ -3,9 +3,9 @@ import "../css/style.css"
 import "../css/bootstrap-grid.min.css"
 import "../css/ionicons.min.css"
 import "../css/plyr.css"
+import { Link } from "react-router-dom"
 
 export default function MovieGalleryCard(props){
-
 
     return (
         <div className="col-6 col-sm-12 col-lg-6">
@@ -15,7 +15,15 @@ export default function MovieGalleryCard(props){
                         <div className="card__cover">
                             <img src={`https://image.tmdb.org/t/p/original${props.movie.data.poster_path}`} alt="" />
                             <a className="card__play">
-                            <i className="icon ion-ios-play"></i>
+                            
+                                <Link
+                                to={{
+                                    pathname: `/details?name=${props.movie.data.title}&id=${props.movie.data.id}`  
+                                }}>
+                                    <i className="icon ion-ios-play">
+                                    </i> 
+                                </Link>
+                            
                             </a>
                         </div>
                     </div>
