@@ -8,7 +8,6 @@ export default function MovieCard(props){
 
 
     return (
-        // {props.movie.img}
         <div className="col-6 col-sm-4 col-lg-3 col-xl-2">
             <div className="card">
                 <div className="card__cover">
@@ -26,7 +25,7 @@ export default function MovieCard(props){
                             return <a>{genre.name}</a>
                         })} 
                     </span>
-                    <span class="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>
+                    <span className="card__rate"><i className="icon ion-ios-star"></i>{props.movie.data.vote_average}</span>
                         <ul className="card__list">
                             <li>
                                 <a>

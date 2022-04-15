@@ -12,6 +12,7 @@ export default function Gallery() {
         axios.get(`https://qacinema-temi.herokuapp.com/movies/`)
         .then(res =>{
             setMovieList(res.data)
+            console.log(movieList)
         })
         .catch((err) => console.log(err))
     }, [])

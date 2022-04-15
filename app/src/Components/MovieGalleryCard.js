@@ -15,10 +15,11 @@ export default function MovieGalleryCard(props){
                         <div className="card__cover">
                             <img src={`https://image.tmdb.org/t/p/original${props.movie.data.poster_path}`} alt="" />
                             <a className="card__play">
-                            
+                            {console.log(props.data.filter(({api_ID}) => api_ID === props.movie.data.id)[0].id)}
+                            {console.log(props.data)}
                                 <Link
                                 to={{
-                                    pathname: `/details?name=${props.movie.data.title}&id=${props.movie.data.id}`  
+                                    pathname: `/details?name=${props.movie.data.title}&api_id=${props.movie.data.id}&id=${props.data.filter(({api_ID}) => api_ID === props.movie.data.id)[0].id}`  
                                 }}>
                                     <i className="icon ion-ios-play">
                                     </i> 

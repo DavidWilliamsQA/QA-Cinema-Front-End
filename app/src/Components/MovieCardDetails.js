@@ -22,7 +22,6 @@ export default function MovieCardDetails({data}){
         .catch((err) => console.log(err))
     }, [movieApiId]) 
 
-
     return (
             
 			        <div className="row">
